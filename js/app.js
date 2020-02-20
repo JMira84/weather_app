@@ -27,6 +27,8 @@ if (navigator.geolocation) {
                 
                 const { temperature, summary, icon } = data.currently;
 
+                const CELSIUS = (temperature - 32) * (5 / 9);
+
                 // Set DOM Elements from the API
                 tempDegree.textContent = temperature;
                 tempDescription.textContent = summary;
@@ -34,6 +36,9 @@ if (navigator.geolocation) {
 
                 // Set Icon
                 setIcons(icon, WEATHER_ICON);
+
+                // Change temp
+                changeTemp(CELSIUS, temperature);
             });
     });
 } else {
@@ -45,6 +50,23 @@ function setIcons(icon, iconID) {
     const SKY_CONS = new Skycons({ color: 'white' });
     // Look for every line, and when it founds everyline replaces it for underscore
     const CURRENT_ICON = icon.replace(/-/g, '_').toUpperCase();
+    // Animate Icon
     SKY_CONS.play();
     return SKY_CONS.set(iconID, Skycons[CURRENT_ICON]);
+}
+
+const TEMP_SECTION = document.querySelector('.degree-section');
+const TEMP_SPAN = document.querySelector('.degree-section span');
+
+function changeTemp(celsius, temperature) {
+    // Change temperature to Celsius/Fahrenheit
+    TEMP_SECTION.addEventListener('click', () => {
+        if (TEMP_SPAN.textContent === 'F') {
+            TEMP_SPAN.textContent = 'ºC';
+            tempDegree.textContent = Math.floor(celsius);
+        } else {
+            TEMP_SPAN.textContent = 'F';
+            tempDegree.textContent = temperature;
+        }
+    });
 }
