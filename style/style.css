@@ -73,3 +73,20 @@ p {
     flex-direction: column;
     align-items: center;
 }
+
+
+/*------------------------------------------------------------------------*/
+/*------------------------------TEMPS BACKGROUNDs-------------------------*/
+/*------------------------------------------------------------------------*/
+
+.hot {
+    background: linear-gradient(rgb(163, 74, 47), rgb(143, 48, 102));
+}
+
+.moderate {
+    background: linear-gradient(rgb(161, 163, 47), rgb(48, 143, 104));
+}
+
+.cold {
+    background: linear-gradient(rgb(47, 109, 163), rgb(48, 143, 139));
+}
