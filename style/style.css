@@ -21,6 +21,10 @@ body {
     color: #fff;
 }
 
+.info-msg { display: none; }
+
+.show { display: block; }
+
 .location,
 .temperature {
     display: flex;
