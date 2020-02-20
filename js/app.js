@@ -38,7 +38,7 @@ if (navigator.geolocation) {
     });
 } else {
     INFO_MSG.classList.add('show');
-    INFO_MSG.textContent = 'Para veres a temperatura no teu fuso horário, activa o serviço de localização'
+    INFO_MSG.textContent = 'Para veres a temperatura no teu fuso horário, activa o serviço de localização.'
 }
 
 function setIcons(icon, iconID) {
