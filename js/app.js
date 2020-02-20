@@ -5,6 +5,8 @@ let tempDescription = document.querySelector('.temperature-description p');
 let tempDegree = document.querySelector('.temperature-degree');
 let locationTimeZone = document.querySelector('.location-timezone');
 
+const BODY = document.querySelector('body');
+
 const WEATHER_ICON = document.querySelector('.icon');
 
 const INFO_MSG = document.querySelector('.info-msg');
@@ -39,6 +41,14 @@ if (navigator.geolocation) {
 
                 // Change temp
                 changeTemp(CELSIUS, temperature);
+
+                if (temperature >= 71.6) {
+                    BODY.classList.add('hot');
+                } else if (temperature >= 60.8 && temperature < 71.6) {
+                    BODY.classList.add('moderate');
+                } else {
+                    BODY.classList.add('cold');
+                }
             });
     });
 } else {
