@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgb(47,150,163), rgb(48,62,143));
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+.location,
+.temperature {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 30vh;
+}
+
+.temperature { flex-direction: column; }
+
+.degree-section {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.degree-section span {
+    margin: 10px;
+    font-size: 3rem;
+}
+
+.degree-section h2 {
+    font-size: 4rem;
+}
