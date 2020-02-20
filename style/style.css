@@ -24,9 +24,9 @@ main {
     height: 100vh;
 }
 
-.info-msg { display: none; }
+.info-msg { display: none }
 
-.show { display: block; }
+.show { display: block }
 
 .location,
 .temperature {
@@ -37,7 +37,7 @@ main {
     height: 30vh;
 }
 
-.temperature { flex-direction: column; }
+.temperature { flex-direction: column }
 
 .degree-section {
     display: flex;
@@ -53,3 +53,5 @@ main {
 .degree-section h2 {
     font-size: 4rem;
 }
+
+.temperature-description p { font-size: 2rem }
