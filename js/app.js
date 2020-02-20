@@ -1,7 +1,7 @@
 let long;
 let lat;
 
-let tempDescription = document.querySelector('.temperature-description');
+let tempDescription = document.querySelector('.temperature-description p');
 let tempDegree = document.querySelector('.temperature-degree');
 let locationTimeZone = document.querySelector('.location-timezone');
 
