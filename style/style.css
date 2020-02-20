@@ -24,6 +24,10 @@ main {
     height: 100vh;
 }
 
+p {
+    font-size: 2rem;
+}
+
 .info-msg { display: none }
 
 .show { display: block }
@@ -34,7 +38,16 @@ main {
     justify-content: space-around;
     align-items: center;
     width: 50%;
-    height: 30vh;
+}
+
+.location-timezone {
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+.location-timezone,
+.icon {
+    margin-bottom: 30px;
 }
 
 .temperature { flex-direction: column }
@@ -42,6 +55,7 @@ main {
 .degree-section {
     display: flex;
     align-items: center;
+    margin-bottom: 50px;
     cursor: pointer;
 }
 
@@ -50,8 +64,12 @@ main {
     font-size: 3rem;
 }
 
-.degree-section h2 {
-    font-size: 4rem;
+.temperature-degree {
+    font-size: 10rem;
 }
 
-.temperature-description p { font-size: 2rem }
+.temperature-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
