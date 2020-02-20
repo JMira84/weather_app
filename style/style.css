@@ -16,7 +16,7 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(rgb(47,150,163), rgb(48,62,143));
+    background: linear-gradient(rgb(163, 74, 47), rgb(143, 48, 102));
     font-family: 'Poppins', sans-serif;
     color: #fff;
 }
